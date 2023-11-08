@@ -5,6 +5,8 @@ import Button from "./components/button";
 import Separator from "./components/separator";
 import List from "./screens/list";
 import Article from "./screens/article";
+import ProfilBem from "./screens/profilBem";
+import ProfilDPM from "./screens/profilDPM";
 
 // Functional Component
 const App = () => {
@@ -29,6 +31,10 @@ const App = () => {
       <Separator height={30} />
       <Button text="Article" onPress={() => changePage(drawer, "article")} />
       <Separator height={30} />
+      <Button text="ProfilDPM" onPress={() => changePage(drawer, "profilDPM")} />
+      <Separator height={30} />
+      <Button text="ProfilBem" onPress={() => changePage(drawer, "profilBem")} />
+      <Separator height={30} />
       <Button text="Close" onPress={() => drawer.current.closeDrawer()} />
     </View>
   );
@@ -43,7 +49,7 @@ const App = () => {
       <StatusBar style="light" backgroundColor="#AA0002" />
       <View>
         <Header drawer={drawer} />
-        {page == "list" ? <List /> : page == "article" ? <Article /> : null}
+        {page == "list" ? <List /> : page == "article" ? <Article /> : page == "profilDPM" ? <ProfilDPM /> : page == "profilBem" ? <ProfilBem /> : null}
       </View>
     </DrawerLayoutAndroid>
   );
