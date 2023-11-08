@@ -12,22 +12,31 @@ const Header = (props) => {
       </TouchableOpacity>
       <View>
         <View style={styles.iconsView}>
+          <TouchableOpacity onPress={() => props.drawer.current.openDrawer()}>
           <Image
             source={require("../assets/facebook.png")}
             style={styles.icons}
           />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => props.drawer.current.openDrawer()}>
           <Image
             source={require("../assets/youtube.png")}
             style={styles.icons}
           />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => props.drawer.current.openDrawer()}>
           <Image
             source={require("../assets/twitter.png")}
             style={styles.icons}
           />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => props.drawer.current.openDrawer()}>
           <Image
             source={require("../assets/search.png")}
             style={styles.icons}
           />
+          </TouchableOpacity>
+          
         </View>
       </View>
     </View>

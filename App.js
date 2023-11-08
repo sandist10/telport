@@ -30,6 +30,10 @@ const App = () => {
       <Button text="Article" onPress={() => changePage(drawer, "article")} />
       <Separator height={30} />
       <Button text="Close" onPress={() => drawer.current.closeDrawer()} />
+      <Separator height={30} />
+      <Button text="Profil Bem" onPress={() => drawer.current.closeDrawer()} />
+      <Separator height={30} />
+      <Button text="Profil DPM" onPress={() => drawer.current.closeDrawer()} />
     </View>
   );
 
@@ -40,7 +44,7 @@ const App = () => {
       drawerPosition="left"
       renderNavigationView={navigationView}
     >
-      <StatusBar style="light" backgroundColor="#AA0002" />
+      <StatusBar style="light" backgroundColor="#AA0002" /> 
       <View>
         <Header drawer={drawer} />
         {page == "list" ? <List /> : page == "article" ? <Article /> : null}

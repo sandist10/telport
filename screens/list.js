@@ -1,11 +1,4 @@
-import {
-    FlatList,
-    Image,
-    Text,
-    TouchableOpacity,
-    View,
-    StyleSheet,
-  } from "react-native";
+import { FlatList, Image, Text, TouchableOpacity, View, StyleSheet } from "react-native";
   
   // Dummmy Data (Array of Object)
   const datas = [
